@@ -49,3 +49,29 @@ function fizzBuzz(number) {
 }
 
 fizzBuzz(10);
+//----------------------------------------------
+
+class user {
+    constructor(userName) {
+        this.name = userName;
+    }
+    getUsername() {
+        return this.name;
+    }
+    setUsername(userName) {
+        this.name = userName;
+    }
+}
+
+class ChatUser extends User {
+    constructor(userName) {
+        super(userName)
+        this.warning_count = 0;
+    }
+    giveWarning() {
+        this.warning_count += 1;
+    }
+    getWarningCount() {
+        return this.warning_count;
+    }
+}
