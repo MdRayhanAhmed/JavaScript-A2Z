@@ -1,0 +1,237 @@
+HackerRank Certified 🥇Javascript(Basic) Question Solved
+---------------------------------------------
+Question
+The Question is about Javascript Classes and Inheritance.
+
+User Warning Data
+Implement the classes and methods to maintain user data using
+inheritance as described below.
+
+Create a class User and its methods as follows:
+- The constructor takes a single parameter, userName, and sets user
+name.
+- The method getUsername() returns the username.
+- The method setUsername(username) set’s the username of the user to the given username.
+
+Create a class ChatUser that inherits User class and has the following
+methods:
+- The constructor takes a single parameter, userName then sets username to userName and the initial warning count to 0.
+- The method giveWarning() that increases the warning count by 1.
+- The method getWarningCount() that returns the current warning
+count.
+
+The locked stub code in the editor validates the correctness of
+the ChatUser class implementation by performing the following
+onerations:
+- SetName username: This operation updates the username.
+- GiveWarning. This operation increases the warning count of the user.
+
+After performing all the operations, the locked stub code prints the
+current username and warning count of the user. Finally, the use of
+inheritance is tested.
+
+Sample Input For Custom Testing
+Jay
+5
+GiveWarning
+GiveWarning
+SetName JayMenon
+GiveWarning
+GiveWarning
+
+Sample Output
+User JayMenon has a warning count of 4
+Chatlser extends User: true
+
+Explanation
+A ChatUser object is created with the username ‘Jay’. As per the
+given operations, the name is set to ‘JayMenon’ and the warning
+count is increased 4 times. Hence the final outout is ‘User
+JayMenon has warning count of 4. The last line checks if
+ChatUserinherits the User class.
+
+Solution
+-----------
+This is the initial code that they provided
+
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+let inputString = "";
+let currentLine = 0;
+
+process.stdin.on("data", function (chunk) {
+    inputString += chunk;
+});
+process.stdin.on("end", function () {
+    inputString = inputString.split('\n');
+    main();
+});
+
+function readLine() {
+  return inputString[currentLine++];
+}
+
+class User {
+    
+}
+
+class ChatUser {
+   
+}
+
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+    
+    const initialUsername = readLine().trim();
+    const chatUserObj = new ChatUser(initialUsername);
+    
+    let numberOfOperations = parseInt(readLine().trim());
+    while (numberOfOperations-- > 0) {
+        const inputs = readLine().trim().split(' ');
+        const operation = inputs[0];
+        const username = inputs[1];
+
+        switch(operation) {
+            case 'GiveWarning':
+                chatUserObj.giveWarning();
+                break;
+            case 'SetName':
+                chatUserObj.setUsername(username);
+                break;
+            default:
+                break;
+        }
+    }
+    ws.write(`User ${chatUserObj.getUsername()} has a warning count of ${chatUserObj.getWarningCount()}\n`);
+    ws.write(`ChatUser extends User: ${(chatUserObj instanceof User).toString()}`);
+    ws.end();
+}
+--------------
+First: Implement User Class and its methods
+
+1) The constructor takes a single parameter, userName, and sets user
+name.
+2) The method getUsername() returns the username.
+3) The method setUsername(username) set’s the username of the user to the given username.
+
+class User {
+    constructor(username) { //1) added a constructor that takes username and set class name to username
+        this.name = username
+    }
+    
+    getUsername () { // 2)getUsername() returns the username
+        return this.name
+    }
+    
+    setUsername(userName) { // 3) setUsername(username) set's the username of the user to the given username.
+        this.name = userName
+    }
+}
+Second: Create a class ChatUser that inherits User class and has the following methods:
+
+1) The constructor takes a single parameter userName then sets username to userName and the initial warning count to 0.
+2) The method giveWarning() that increases the warning count by 1.
+3) The method getWarningCount() that returns the current warning
+count.
+
+class ChatUser extends User { // the class should inherits User class
+    constructor(userName) {// 1) The constructor takes a single parameter userName
+        super(userName) // sets username to its parent (User) userName 
+        this.count = 0 // initial warning count to 0
+    }
+    
+    giveWarning() { // 2) giveWarning() that increases the warning count by 1
+        let count = this.count + 1
+        this.count = count
+    }
+    
+    getWarningCount() { // 3) getWarningCount() that returns the current warning count.
+        return this.count
+    }
+}
+Final Code:
+
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+let inputString = "";
+let currentLine = 0;
+
+process.stdin.on("data", function (chunk) {
+    inputString += chunk;
+});
+process.stdin.on("end", function () {
+    inputString = inputString.split('\n');
+    main();
+});
+
+function readLine() {
+  return inputString[currentLine++];
+}
+
+class User {
+    constructor(username) {
+        this.name = username
+    }
+    
+    getUsername () {
+        return this.name
+    }
+    
+    setUsername(userName) {
+        this.name = userName
+    }
+}
+
+class ChatUser extends User {
+    constructor(userName) {
+        super(userName)
+        this.count = 0
+    }
+    
+    giveWarning() {
+        let count = this.count + 1
+        this.count = count
+    }
+    
+    getWarningCount() {
+        return this.count
+    }
+}
+
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+    
+    const initialUsername = readLine().trim();
+    const chatUserObj = new ChatUser(initialUsername);
+    
+    let numberOfOperations = parseInt(readLine().trim());
+    while (numberOfOperations-- > 0) {
+        const inputs = readLine().trim().split(' ');
+        const operation = inputs[0];
+        const username = inputs[1];
+
+        switch(operation) {
+            case 'GiveWarning':
+                chatUserObj.giveWarning();
+                break;
+            case 'SetName':
+                chatUserObj.setUsername(username);
+                break;
+            default:
+                break;
+        }
+    }
+    ws.write(`User ${chatUserObj.getUsername()} has a warning count of ${chatUserObj.getWarningCount()}\n`);
+    ws.write(`ChatUser extends User: ${(chatUserObj instanceof User).toString()}`);
+    ws.end();
+}
