@@ -42,7 +42,7 @@ console.log(getPerimeter(length, width))
 
 
 
-// Problem 04 - Functions
+// Problem 04 - Functions(factorial)
 const factorial = (n) => {
     if (n === 1) {
         return 1;
