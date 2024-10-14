@@ -1,0 +1,8 @@
+Problem 01 - Hello, World!
+------------------------
+https://www.hackerrank.com/challenges/js10-hello-world/problem?isFullScreen=true
+
+
+Problem 02 - Data Types
+----------------------
+https://www.hackerrank.com/challenges/js10-data-types/problem?isFullScreen=true
