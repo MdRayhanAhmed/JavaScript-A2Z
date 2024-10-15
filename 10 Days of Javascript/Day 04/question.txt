@@ -1,0 +1,11 @@
+Problem 06 - Conditional Statements: If-Else
+------------------------
+https://www.hackerrank.com/challenges/js10-if-else/problem
+
+Problem 07 - Conditional Statements: Switch
+----------------------
+https://www.hackerrank.com/challenges/js10-switch/problem
+
+Problem 08 -  Loops
+----------------------
+https://www.hackerrank.com/challenges/js10-loops/problem
