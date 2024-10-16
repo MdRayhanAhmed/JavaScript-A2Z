@@ -26,7 +26,7 @@ function getSecondLargest(nums) {
 console.log(getSecondLargest(nums))
 
 
-// Problem 07 - Conditional Statements: Switch
+// Problem 10 - Conditional Statements: Switch
 
 function getLetter(s) {
     let letter;
@@ -50,7 +50,7 @@ function getLetter(s) {
 
 console.log(getLetter('adfgt'))
 
-// Problem 08 -  Loops
+// Problem 11 -  Loops
 
 function vowelsAndConsonants(s) {
     for (let i = 0; i < s.length; i++) {
