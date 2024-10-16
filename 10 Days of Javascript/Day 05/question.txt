@@ -1,0 +1,11 @@
+Problem 15 - Day 05: Inheritance
+------------------------
+https://www.hackerrank.com/challenges/js10-inheritance/problem
+
+Problem 16 - Day 5: Template Literals
+----------------------
+https://www.hackerrank.com/challenges/js10-template-literals/problem
+
+Problem 17 - Day 5: Arrow Functions
+----------------------
+https://www.hackerrank.com/challenges/js10-arrows/problem
