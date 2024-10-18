@@ -1,0 +1,7 @@
+Problem 18 - Day 6: Bitwise Operators
+------------------------
+https://www.hackerrank.com/challenges/js10-bitwise/problem
+
+Problem 19 - Day 6: JavaScript Dates
+----------------------
+https://www.hackerrank.com/challenges/js10-date/problem
