@@ -1,0 +1,7 @@
+1. Uncaught ReferenceError: name1 is not defined
+
+2. GeeksforGeeks
+
+3. GeeksforGeeks
+
+4. Uncaught ReferenceError: a is not defined
