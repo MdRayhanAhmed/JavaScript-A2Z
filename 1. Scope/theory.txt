@@ -1,0 +1,16 @@
+Scope
+------
+Scope means variable access. Scope determines where variable are defined and where they can be accessed.
+
+A scope can be defined in three ways –
+
+Local Scope: Variables declared within a function are accessible only within that function’s scope.
+ This encapsulation prevents conflicts and unintended modifications from other parts of the code.
+
+Global Scope: Variables declared outside of any function or block are in the global scope, accessible
+ from anywhere within the program. However, relying too heavily on global variables can lead to code 
+ that’s harder to maintain and debug.
+
+Block Scope: Introduced with the ‘let’ and ‘const’ keywords, block scope confines variables to the
+ nearest enclosing pair of curly braces ‘{}’. This enhances code predictability and reduces the risk
+  of variable hoisting, a behavior associated with the var keyword.
