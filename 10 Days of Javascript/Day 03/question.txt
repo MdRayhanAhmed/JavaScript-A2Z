@@ -1,9 +1,11 @@
-Problem 09 - Conditional Statements: If-Else
+Problem 09 - Arrays
 ------------------------
+https://www.hackerrank.com/challenges/js10-arrays/problem
 
-
-Problem 10 - Conditional Statements: Switch
+Problem 10 - Try, Catch, and finally
 ----------------------
+https://www.hackerrank.com/challenges/js10-try-catch-and-finally/problem
 
-Problem 11 -  Loops 
+Problem 11 -  Throw
 ----------------------
+https://www.hackerrank.com/challenges/js10-throw/problem

@@ -1,6 +1,4 @@
-// Problem 09 - Conditional Statements: If-Else
-
-
+// Problem 09 - Arrays
 
 /**
 *   Return the second largest number in the array.
@@ -22,47 +20,57 @@ function getSecondLargest(nums) {
     }
     return second;
 }
-
+let nums = [2, 3, 6, 6, 5]
 console.log(getSecondLargest(nums))
 
 
-// Problem 10 - Conditional Statements: Switch
+// Problem 10 - Try, Catch, and finally
 
-function getLetter(s) {
-    let letter;
-    // Write your code here
-    switch (s[0]) {
-        case 'a' || 'e' || 'i' || 'o' || 'u':
-            letter = 'A';
-            break;
-        case 'b' || 'c' || 'd' || 'f' || 'g':
-            letter = 'B';
-            break;
-        case 'h' || 'j' || 'k' || 'l' || 'm':
-            letter = 'C';
-            break;
-        default:
-            letter = 'D';
+/*
+ * Complete the reverseString function
+ * Use console.log() to print to stdout.
+ */
+function reverseString(s) {
+    let a = s
+    try {
+        let arr = s.split('').reverse()
+        a = arr.join('')
     }
-
-    return letter;
-}
-
-console.log(getLetter('adfgt'))
-
-// Problem 11 -  Loops
-
-function vowelsAndConsonants(s) {
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
-            console.log(s[i]);
-        }
+    catch (err) {
+        console.log(err.message)
     }
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] !== 'a' && s[i] !== 'e' && s[i] !== 'i' && s[i] !== 'o' && s[i] !== 'u') {
-            console.log(s[i]);
-        }
+    finally {
+        console.log(a)
     }
 }
 
-vowelsAndConsonants('javascriptloops')
+reverseString(1234)
+
+// Problem 11 -  Throw
+
+/*
+ * Complete the isPositive function.
+ * If 'a' is positive, return "YES".
+ * If 'a' is 0, throw an Error with the message "Zero Error"
+ * If 'a' is negative, throw an Error with the message "Negative Error"
+ */
+function isPositive(a) {
+    if (a <= 0) {
+        throw new Error(a == 0 ? "Zero Error" : "Negative Error");
+    }
+    return "YES";
+}
+
+console.log(isPositive(3))
+
+// function isPositive(a) {
+//     if(a > 0){
+//         return "YES";
+//     }
+//     else if(a === 0){
+//         throw new Error("Zero Error");
+//     }
+//     else {
+//         throw new Error("Negative Error");
+//     }
+// }
