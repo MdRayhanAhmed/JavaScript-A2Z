@@ -43,8 +43,8 @@ function reverseString(s) {
         console.log(a)
     }
 }
-
-reverseString(1234)
+reverseString("1234")
+// reverseString(1234)
 
 // Problem 11 -  Throw
 
