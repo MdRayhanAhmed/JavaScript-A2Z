@@ -1,11 +1,59 @@
-Problem 12 - Conditional Statements: If-Else
+Problem 12 - Day 4: Create a Rectangle Object
 ------------------------
-https://www.hackerrank.com/challenges/js10-if-else/problem
+https://www.hackerrank.com/challenges/js10-objects/problem
+Task
+Complete the function in the editor. It has two parameters: a and b. 
+ It must return an object modeling a rectangle that has the following properties:
 
-Problem 13 - Conditional Statements: Switch
-----------------------
-https://www.hackerrank.com/challenges/js10-switch/problem
+* length: This value is equal to a.
+* width: This value is equal to b.
+* perimeter: This value is equal to 2*(a+b)
+* area: This value is equal to a*b
+Note: The names of the object's properties must be spelled
+ correctly to pass this
 
-Problem 14 -  Loops
+Sample Input 0
+4
+5
+
+Sample Output 0
+4
+5
+18
+20
+Explanation 0
+Given a length of a =4 and a width of b= 5, the Rectangle object's perimeter is 
+4+4+5+5 = 18 and its area is 4*5 = 20
+
+Problem 13 - Day 4: Count Objects
 ----------------------
-https://www.hackerrank.com/challenges/js10-loops/problem
+https://www.hackerrank.com/challenges/js10-count-objects/problem
+
+It has one parameter: an array, a, of objects. 
+ Each object in the array has two integer properties denoted by x and y.
+ The function must return a count of all such objects o in array a that
+  satisfy o.x == o.y.
+
+Sample Input 0
+5
+1 1
+2 3
+3 3
+3 4
+4 5
+
+Sample Output 0
+2
+
+Explanation 0
+There are n=5 objects in the objects array:
+* object S0= {x:1,y=1}
+* object S1= {x:2,y=3}
+* object S2= {x:3,y=3}
+* object S3= {x:3,y=4}
+* object S4= {x:4,y=5}
+Because we have two objects o that satisfy o.x == o.y (i.e., object S0 and object S2),
+ we return 2 as our answer.
+Problem 14 -  Day 4: Classes
+----------------------
+https://www.hackerrank.com/challenges/js10-class/problem

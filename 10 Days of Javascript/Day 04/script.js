@@ -1,71 +1,84 @@
-// Problem 06 - Conditional Statements: If-Else
+// Problem 12 - Day 4: Create a Rectangle Object
 
-function getGrade(score) {
-    let grade;
-    // Write your code here
-    if (score > 25 && score <= 30) {
-        grade = "A";
+/*
+ * Complete the Rectangle function
+ */
+function Rectangle(a, b) {
+    const perimeter = 2 * (a + b);
+    const area = a * b;
+    const recObject = {
+        length: a,
+        width: b,
+        perimeter: perimeter,
+        area: area
     }
-    if (score > 20 && score <= 25) {
-        grade = "B";
-    }
-    if (score > 15 && score <= 20) {
-        grade = "C";
-    }
-    if (score > 10 && score <= 15) {
-        grade = "D";
-    }
-    if (score > 5 && score <= 10) {
-        grade = "E";
-    }
-    if (score > 0 && score <= 5) {
-        grade = "F";
-    }
+    return recObject;
+}
+const a = 4
+const b = 5
 
-    return grade;
+const rec = new Rectangle(a, b);
+
+console.log(rec.length);
+console.log(rec.width);
+console.log(rec.perimeter);
+console.log(rec.area);
+
+// Problem 13 - Day 4: Count Objects
+/*
+ * Return a count of the total number of objects 'o' satisfying o.x == o.y.
+ * 
+ * Parameter(s):
+ * objects: an array of objects with integer properties 'x' and 'y'
+ */
+function getCount(objects) {
+    return objects.filter(({ x, y }) => x == y).length;
 }
 
 
-console.log(getGrade(11))
+// function getCount(objects) {
+//     let count=0;
+//     objects.forEach(function(ob){
+//         if(ob.x === ob.y){
+//             count++;
+//         }
+//     })
+//     return count;
+// }
 
-
-// Problem 07 - Conditional Statements: Switch
-
-function getLetter(s) {
-    let letter;
-    // Write your code here
-    switch (s[0]) {
-        case 'a' || 'e' || 'i' || 'o' || 'u':
-            letter = 'A';
-            break;
-        case 'b' || 'c' || 'd' || 'f' || 'g':
-            letter = 'B';
-            break;
-        case 'h' || 'j' || 'k' || 'l' || 'm':
-            letter = 'C';
-            break;
-        default:
-            letter = 'D';
+// Problem 14 -  Day 4: Classes
+/*
+ * Implement a Polygon class with the following properties:
+ * 1. A constructor that takes an array of integer side lengths.
+ * 2. A 'perimeter' method that returns the sum of the Polygon's side lengths.
+ */
+class Polygon {
+    constructor(arr) {
+        this.arr = arr;
     }
-
-    return letter;
-}
-
-console.log(getLetter('adfgt'))
-
-// Problem 08 -  Loops
-
-function vowelsAndConsonants(s) {
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
-            console.log(s[i]);
-        }
-    }
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] !== 'a' && s[i] !== 'e' && s[i] !== 'i' && s[i] !== 'o' && s[i] !== 'u') {
-            console.log(s[i]);
-        }
+    perimeter() {
+        return this.arr.reduce((a, b) => a + b)
     }
 }
 
-vowelsAndConsonants('javascriptloops')
+// class Polygon{
+//     sum = 0
+//     constructor(array){
+//         this.arr = array
+//     }
+//     perimeter(){
+//         this.arr.forEach(element =>{
+//             this.sum+=element
+//         })
+//         return this.sum;
+//     }
+// }
+
+
+const rectangle = new Polygon([10, 20, 10, 20]);
+const square = new Polygon([10, 10, 10, 10]);
+const pentagon = new Polygon([10, 20, 30, 40, 43]);
+
+console.log(rectangle.perimeter());
+console.log(square.perimeter());
+console.log(pentagon.perimeter());
