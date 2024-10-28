@@ -10,7 +10,7 @@ function getMaxLessThanK(n, k) {
         }
     return max;
 }
-
+console.log(getMaxLessThanK(8, 3))        //8 3 = 2, 2 2 = 0
 
 // Problem 19 - Day 6: JavaScript Dates
 
@@ -19,3 +19,15 @@ function getDayName(dateString) {
     let dayName = new Date(dateString);
     return dayName.toLocaleString("en-US", { weekday: 'long' });
 }
+
+
+
+// // The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+// function getDayName(dateString) {
+//     let dayName;
+//     // Write your code here
+//     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+//     dayName = days[new Date(dateString).getDay()];
+    
+//     return dayName;
+// }
