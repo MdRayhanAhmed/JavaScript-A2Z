@@ -1,0 +1,7 @@
+Closure
+------
+A closure is simply a function inside another function that has access to the outer function variable.
+
+
+
+
