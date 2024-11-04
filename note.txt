@@ -1,0 +1,3 @@
+check - node -v
+path name- cd '.\2/ Promises\'
+run code - node script.js
