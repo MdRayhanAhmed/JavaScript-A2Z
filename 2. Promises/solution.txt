@@ -1,6 +1,8 @@
 1. (script.js:11) 
 User name exist
 
+2-7(https://github.com/hiteshchoudhary/js-hindi-youtube/blob/main/09_advance_one/promises.js)
+
 2.
 (script.js:18) Async task is complete
 (script.js:23) Promise consumed
@@ -16,3 +18,7 @@ Async task 2 is complete
 (script.js:62) {username: 'rayhan', password: '12345'}
 (script.js:66) rayhan
 (script.js:71) The Promise is either resolve or reject
+
+6.
+
+7.
